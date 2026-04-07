@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +27,7 @@ body{
 <br><br>
 
                 <input type="button" name="button" id="loginBTN" value="Login" class="btn btn-info rounded-5" onclick="authenticate()">
-                <input type="reset" name="reset" id="cancelBTN" value="Cancel" class="btn btn-info rounded-5" onclick="authenticate()">
+                <input type="reset" name="reset" id="cancelBTN" value="Cancel" class="btn btn-info rounded-5">
 
 </form>
 
@@ -42,6 +41,18 @@ body{
         let pwd = document.getElementById("pwd").value;
         let granted = "Welcome " + username + "!";
         let denied = "Access denied. Account locked after 3 attempts!";
+
+        while (attempt_counter < 3) {
+            if (username === "PBCO20263x3champion" && pwd === "7.91ao5") {
+                alert(granted);
+                attempt_counter = 0; // reset attempts after successful login
+                document.getElementById("display").innerHTML = "";
+                window.location.href = "dashboard.html";
+
+                break; // stop loop
+            } 
+        }
+
     }
 </script>
 
